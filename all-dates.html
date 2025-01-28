@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>All Dates</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      overflow: hidden;
+      background: linear-gradient(135deg, #ff9a9e, #fad0c4);
+      font-family: 'Arial', sans-serif;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+
+    .container {
+      text-align: center;
+      background-color: rgba(255, 255, 255, 0.9);
+      padding: 30px;
+      border-radius: 15px;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+      z-index: 10;
+    }
+
+    h1 {
+      font-size: 32px;
+      color: #ff4081;
+      margin-bottom: 20px;
+    }
+
+    .hearts {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      overflow: hidden;
+      z-index: 1;
+    }
+
+    .hearts div {
+      position: absolute;
+      color: #ff4081;
+      font-size: 20px;
+      animation: float 10s infinite ease-in-out;
+    }
+
+    @keyframes float {
+      0% { transform: translateY(0) rotate(0deg); }
+      50% { transform: translateY(-20px) rotate(180deg); }
+      100% { transform: translateY(0) rotate(360deg); }
+    }
+  </style>
+</head>
+<body>
+  <!-- Background hearts -->
+  <div class="hearts">
+    <div style="top: 10%; left: 20%;">❤️</div>
+    <div style="top: 50%; left: 70%;">❤️</div>
+    <div style="top: 80%; left: 40%;">❤️</div>
+    <div style="top: 30%; left: 60%;">❤️</div>
+    <div style="top: 20%; left: 50%;">❤️</div>
+    <div style="top: 70%; left: 10%;">❤️</div>
+    <div style="top: 90%; left: 80%;">❤️</div>
+    <div style="top: 40%; left: 30%;">❤️</div>
+  </div>
+
+  <!-- Main content -->
+  <div class="container">
+    <h1>We will have all of these dates, baby! 💖</h1>
+  </div>
+</body>
+</html>
