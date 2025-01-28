@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Choose a Date</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      overflow: hidden;
+      background: linear-gradient(135deg, #ff9a9e, #fad0c4);
+      font-family: 'Arial', sans-serif;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+
+    .container {
+      text-align: center;
+      background-color: rgba(255, 255, 255, 0.9);
+      padding: 30px;
+      border-radius: 15px;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+      z-index: 10;
+    }
+
+    h1 {
+      font-size: 32px;
+      color: #ff4081;
+      margin-bottom: 20px;
+    }
+
+    .options button {
+      background-color: #ff4081;
+      color: white;
+      border: none;
+      padding: 10px 20px;
+      margin: 10px;
+      border-radius: 5px;
+      cursor: pointer;
+      font-size: 16px;
+      transition: background-color 0.3s ease;
+    }
+
+    .options button:hover {
+      background-color: #ff79a8;
+    }
+
+    .shapes {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      overflow: hidden;
+      z-index: 1;
+    }
+
+    .shapes div {
+      position: absolute;
+      background-color: rgba(255, 255, 255, 0.3);
+      border-radius: 50%;
+      animation: float 10s infinite ease-in-out;
+    }
+
+    @keyframes float {
+      0% { transform: translateY(0) rotate(0deg); }
+      50% { transform: translateY(-20px) rotate(180deg); }
+      100% { transform: translateY(0) rotate(360deg); }
+    }
+  </style>
+</head>
+<body>
+  <!-- Background shapes -->
+  <div class="shapes">
+    <div style="width: 100px; height: 100px; top: 10%; left: 20%;"></div>
+    <div style="width: 150px; height: 150px; top: 50%; left: 70%;"></div>
+    <div style="width: 80px; height: 80px; top: 80%; left: 40%;"></div>
+    <div style="width: 120px; height: 120px; top: 30%; left: 60%;"></div>
+  </div>
+
+  <!-- Main content -->
+  <div class="container">
+    <h1>Choose one of these dates:</h1>
+    <div class="options">
+      <button onclick="chooseDate('Movie Date')">Movie Date</button>
+      <button onclick="chooseDate('Coffee Date')">Coffee Date</button>
+      <button onclick="chooseDate('Ice Cream Date')">Ice Cream Date</button>
+      <button onclick="chooseDate('Yap Date')">Yap Date</button>
+    </div>
+  </div>
+
+  <script>
+    function chooseDate(date) {
+      alert(`We will have all of these! 💖`);
+    }
+  </script>
+</body>
+</html>
